@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Santo Amaro | Conforto & Hospitalidade em Cansanção - BA</title>
+  <meta name="description" content="Conheça o Hotel Santo Amaro em Cansanção, Bahia. Consulte diretamente a hospedagem, localização e disponibilidade pelo WhatsApp.">
+  <meta name="keywords" content="Hotel Santo Amaro, hotel Cansanção Bahia, hospedagem em Cansanção">
+
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hotel Santo Amaro | Conforto & Hospitalidade em Cansanção - BA">
+  <meta property="og:description" content="Ambientes acolhedores, tranquilidade e excelente localização em Cansanção, Bahia. Reserve sua estadia com a melhor tarifa.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2285%22>🏨</text></svg>">
+
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-item">
+        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Cansanção, Bahia • Localização no Google Maps</span>
+      </div>
+      <div class="top-bar-item desktop-only">
+        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>Recepção Aberta Diariamente</span>
+      </div>
+      <div class="top-bar-item">
+        <a href="https://wa.me/5575991036582?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20reservas%20no%20Hotel%20Santo%20Amaro." target="_blank" rel="noopener noreferrer" class="top-bar-link">
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>Atendimento & Reservas via WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <header class="main-header" id="header">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-subtitle">H O T E L</span>
+        <span class="logo-title">Santo Amaro</span>
+        <span class="logo-city">Cansanção • Bahia</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#sobre" class="nav-link">O Hotel</a></li>
+          <li><a href="#acomodacoes" class="nav-link">Acomodações</a></li>
+          <li><a href="#comodidades" class="nav-link">Comodidades</a></li>
+          <li><a href="#cafe" class="nav-link">Café da Manhã</a></li>
+          <li><a href="#localizacao" class="nav-link">Localização</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+        <div class="nav-mobile-cta">
+          <button class="btn btn-primary btn-block open-reserve-modal">
+            Reservar Estadia
+          </button>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-primary btn-sm desktop-only open-reserve-modal">
+          Reservar Agora
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu de navegação">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-badge animate-fade-in">
+        <span class="badge-dot"></span> Hospitalidade & Tranquilidade no Sertão Baiano
+      </div>
+      <h1 class="hero-title animate-fade-in-up">
+        O descanso e aconchego que você procura em <em>Cansanção</em>.
+      </h1>
+      <p class="hero-description animate-fade-in-up delay-1">
+        Localização estratégica, quartos climatizados, café da manhã regional e atendimento caloroso para você se sentir em casa durante viagens a trabalho ou descanso.
+      </p>
+
+      <div class="hero-buttons animate-fade-in-up delay-2">
+        <button class="btn btn-primary btn-lg open-reserve-modal">
+          <span>Reservar Quarto</span>
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+        <a href="#acomodacoes" class="btn btn-outline btn-lg">
+          Conhecer Acomodações
+        </a>
+      </div>
+
+      <!-- Quick Booking Bar Component -->
+      <div class="booking-bar-wrapper animate-fade-in-up delay-3">
+        <form class="booking-bar" id="quickBookingForm">
+          <div class="booking-field">
+            <label for="checkinDate">Check-in</label>
+            <input type="date" id="checkinDate" required>
+          </div>
+          <div class="booking-divider"></div>
+          <div class="booking-field">
+            <label for="checkoutDate">Check-out</label>
+            <input type="date" id="checkoutDate" required>
+          </div>
+          <div class="booking-divider"></div>
+          <div class="booking-field">
+            <label for="guestCount">Hóspedes</label>
+            <select id="guestCount">
+              <option value="1 Pessoa (Individual)">1 Pessoa (Individual)</option>
+              <option value="2 Pessoas (Casal / Duplo)" selected>2 Pessoas (Casal / Duplo)</option>
+              <option value="3 Pessoas (Triplo)">3 Pessoas (Triplo)</option>
+              <option value="4+ Pessoas (Família)">4+ Pessoas (Família)</option>
+            </select>
+          </div>
+          <div class="booking-action">
+            <button type="submit" class="btn btn-primary btn-block">
+              <span>Consultar Tarifas</span>
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Quick Trust Indicators -->
+      <div class="hero-trust-bar">
+        <div class="trust-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <div>
+            <strong>Avaliação Recomendada</strong>
+            <span>Hóspedes satisfeitos no Google Maps</span>
+          </div>
+        </div>
+        <div class="trust-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+          <div>
+            <strong>Fale com o hotel</strong>
+            <span>Consulte serviços e comodidades disponíveis</span>
+          </div>
+        </div>
+        <div class="trust-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <div>
+            <strong>Informações diretas</strong>
+            <span>Confirme detalhes da hospedagem pelo WhatsApp</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section section-about" id="sobre">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-column">
+          <div class="image-wrapper main-img">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Quarto aconchegante do Hotel Santo Amaro em Cansanção" loading="lazy">
+          </div>
+          <div class="image-wrapper secondary-img desktop-only">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Detalhe de conforto e hospitalidade" loading="lazy">
+          </div>
+          <div class="experience-card">
+            <span class="exp-number">100%</span>
+            <span class="exp-text">Acolhimento & Tradição Baiana</span>
+          </div>
+        </div>
+
+        <div class="about-content-column">
+          <span class="section-tag">BEM-VINDO AO HOTEL SANTO AMARO</span>
+          <h2 class="section-title">
+            Tranquilidade, simplicidade e conforto para sua parada em Cansanção.
+          </h2>
+          <div class="title-underline"></div>
+          <p class="section-lead">
+            Seja para compromissos profissionais, negócios na região ou momentos de descanso na sua viagem, o Hotel Santo Amaro foi pensado para oferecer uma experiência serena e revitalizante.
+          </p>
+          <p class="section-body">
+            Com ambientes limpos, silenciosos e funcionais, valorizamos a autêntica hospitalidade do interior da Bahia. Nossa equipe está sempre pronta para receber você e sua família com atenção calorosa, praticidade no check-in e todas as comodidades necessárias para uma noite revigorante.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              <div class="highlight-text">
+                <h4>Uma estadia acolhedora</h4>
+                <p>Entre em contato para conhecer os quartos e opções disponíveis.</p>
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              <div class="highlight-text">
+                <h4>Localização no mapa</h4>
+                <p>Confira o endereço e planeje sua rota pelo Google Maps.</p>
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              <div class="highlight-text">
+                <h4>Atendimento direto</h4>
+                <p>Consulte a equipe para confirmar comodidades e condições da estadia.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-cta-row">
+            <button class="btn btn-primary open-reserve-modal">
+              Solicitar Reserva
+            </button>
+            <a href="https://wa.me/5575991036582?text=Ol%C3%A1!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20o%20Hotel%20Santo%20Amaro." target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              Falar com a Recepção
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rooms / Accommodations Section -->
+  <section class="section section-rooms" id="acomodacoes">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">ACOMODAÇÕES</span>
+        <h2 class="section-title">Nossos Quartos</h2>
+        <div class="title-underline center"></div>
+        <p class="section-subtitle">
+          Ambientes funcionais, bem arejados e confortáveis para noites de sono tranquilas. Escolha a opção ideal para a sua necessidade.
+        </p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="room-filters">
+        <button class="filter-btn active" data-filter="all">Todas as Opções</button>
+        <button class="filter-btn" data-filter="individual">Individual / Trabalho</button>
+        <button class="filter-btn" data-filter="casal">Casal</button>
+        <button class="filter-btn" data-filter="familia">Família / Duplo</button>
+      </div>
+
+      <!-- Rooms Grid -->
+      <div class="rooms-grid">
+
+        <!-- Quarto 1: Individual Executivo -->
+        <div class="room-card" data-category="individual">
+          <div class="room-image-holder">
+            <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=700&q=80" alt="Quarto Individual Executivo Hotel Santo Amaro" loading="lazy">
+            <span class="room-badge">Praticidade</span>
+          </div>
+          <div class="room-content">
+            <div class="room-capacity">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <span>1 Hóspede • Cama Conforto</span>
+            </div>
+            <h3 class="room-title">Quarto Individual Executivo</h3>
+            <p class="room-desc">
+              Ideal para representantes comerciais e viajantes individuais que buscam um espaço silencioso, funcional e aconchegante para repousar.
+            </p>
+            <ul class="room-amenities-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Ar-condicionado</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Wi-Fi de alta velocidade</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Banheiro privativo com ducha quente</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> TV e mesa de apoio</li>
+            </ul>
+            <div class="room-footer">
+              <div class="room-rate">
+                <span class="rate-label">Consulte valor via WhatsApp</span>
+                <span class="rate-condition">Café da manhã incluso</span>
+              </div>
+              <button class="btn btn-primary btn-sm btn-room-reserve" data-room="Quarto Individual Executivo">
+                Reservar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quarto 2: Casal Conforto -->
+        <div class="room-card" data-category="casal">
+          <div class="room-image-holder">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=700&q=80" alt="Quarto Casal Conforto Hotel Santo Amaro" loading="lazy">
+            <span class="room-badge">Mais Procurado</span>
+          </div>
+          <div class="room-content">
+            <div class="room-capacity">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span>Até 2 Hóspedes • 1 Cama Casal Box</span>
+            </div>
+            <h3 class="room-title">Quarto Casal Conforto</h3>
+            <p class="room-desc">
+              Espaço agradável com colchão anatômico de alta qualidade, iluminação suave e clima fresco para proporcionar o melhor descanso a dois.
+            </p>
+            <ul class="room-amenities-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Cama de casal espaçosa</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Ar-condicionado Split silencioso</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Frigobar e TV</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Wi-Fi e estacionamento</li>
+            </ul>
+            <div class="room-footer">
+              <div class="room-rate">
+                <span class="rate-label">Consulte valor via WhatsApp</span>
+                <span class="rate-condition">Café da manhã incluso</span>
+              </div>
+              <button class="btn btn-primary btn-sm btn-room-reserve" data-room="Quarto Casal Conforto">
+                Reservar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quarto 3: Duplo Solteiro (Twin) -->
+        <div class="room-card" data-category="familia">
+          <div class="room-image-holder">
+            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=700&q=80" alt="Quarto Duplo Solteiro Hotel Santo Amaro" loading="lazy">
+            <span class="room-badge">Prático</span>
+          </div>
+          <div class="room-content">
+            <div class="room-capacity">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span>2 Hóspedes • 2 Camas de Solteiro</span>
+            </div>
+            <h3 class="room-title">Quarto Duplo Solteiro</h3>
+            <p class="room-desc">
+              Perfeito para colegas de trabalho, amigos ou familiares viajando juntos com total privacidade e conforto individual.
+            </p>
+            <ul class="room-amenities-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Duas camas confortáveis</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Climatização completa</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Banheiro privativo higienizado</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Internet Wi-Fi liberada</li>
+            </ul>
+            <div class="room-footer">
+              <div class="room-rate">
+                <span class="rate-label">Consulte valor via WhatsApp</span>
+                <span class="rate-condition">Café da manhã incluso</span>
+              </div>
+              <button class="btn btn-primary btn-sm btn-room-reserve" data-room="Quarto Duplo Solteiro">
+                Reservar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quarto 4: Suíte Família -->
+        <div class="room-card" data-category="familia">
+          <div class="room-image-holder">
+            <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=700&q=80" alt="Suíte Família Hotel Santo Amaro Cansanção" loading="lazy">
+            <span class="room-badge">Espaçoso</span>
+          </div>
+          <div class="room-content">
+            <div class="room-capacity">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span>3 a 4 Hóspedes • 1 Casal + Solteiro</span>
+            </div>
+            <h3 class="room-title">Suíte Família / Triplo</h3>
+            <p class="room-desc">
+              Ampla acomodação para acomodar famílias ou pequenos grupos com bem-estar, espaço e conveniência para todos.
+            </p>
+            <ul class="room-amenities-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Configuração versátil de camas</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Ar-condicionado potente</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Banheiro amplo com ducha quente</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Frigobar, TV e Wi-Fi</li>
+            </ul>
+            <div class="room-footer">
+              <div class="room-rate">
+                <span class="rate-label">Consulte valor via WhatsApp</span>
+                <span class="rate-condition">Café da manhã incluso</span>
+              </div>
+              <button class="btn btn-primary btn-sm btn-room-reserve" data-room="Suíte Família / Triplo">
+                Reservar
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Banner de Ajuda com Reserva -->
+      <div class="rooms-callout">
+        <div class="callout-text">
+          <h3>Tem alguma necessidade especial ou dúvida sobre disponibilidade?</h3>
+          <p>Entre em contato direto com a nossa recepção pelo WhatsApp para atendimento rápido e personalizado.</p>
+        </div>
+        <a href="https://wa.me/5575991036582?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20a%20disponibilidade%20de%20quartos%20no%20Hotel%20Santo%20Amaro." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amenities / Diferenciais Section -->
+  <section class="section section-amenities" id="comodidades">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">INFORMAÇÕES</span>
+        <h2 class="section-title">Planeje sua estadia com facilidade</h2>
+        <div class="title-underline center"></div>
+        <p class="section-subtitle">
+          Fale com a equipe para saber mais sobre acomodações, serviços, tarifas e disponibilidade.
+        </p>
+      </div>
+
+      <div class="amenities-grid">
+        <div class="amenity-card">
+          <div class="amenity-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+          </div>
+          <h4 class="amenity-title">Wi-Fi de Alta Velocidade</h4>
+          <p class="amenity-text">Conexão estável em todas as áreas e quartos para chamadas de vídeo, trabalho remoto ou streaming.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+          </div>
+          <h4 class="amenity-title">Ar-Condicionado</h4>
+          <p class="amenity-text">Climatização moderna em todos os quartos, garantindo noites frescas e sono restaurador.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <h4 class="amenity-title">Café da Manhã Regional</h4>
+          <p class="amenity-text">Comece o dia com sabores típicos da Bahia, bolos frescos, frutas, cuscuz quentinho e café passado na hora.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <h4 class="amenity-title">Estacionamento</h4>
+          <p class="amenity-text">Espaço reservado para o seu veículo durante toda a estadia, com tranquilidade e facilidade de embarque.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h4 class="amenity-title">Ambiente Seguro & Familiar</h4>
+          <p class="amenity-text">Monitoramento e estrutura pensada para a paz e segurança de você e de seus pertences.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h4 class="amenity-title">Check-in Descomplicado</h4>
+          <p class="amenity-text">Atendimento rápido e prestativo para você se instalar sem burocracias ou longas esperas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breakfast / Regional Taste Section -->
+  <section class="section section-breakfast" id="cafe">
+    <div class="container">
+      <div class="breakfast-container">
+        <div class="breakfast-content">
+          <span class="section-tag">TRADIÇÃO & SABOR</span>
+          <h2 class="section-title">Comece sua estadia com tranquilidade</h2>
+          <div class="title-underline"></div>
+          <p class="section-lead">
+            Entre em contato com o hotel para confirmar os serviços e opções disponíveis durante a sua estadia.
+          </p>
+          <p class="section-body">
+            Para informações atualizadas sobre café da manhã, comodidades e horários, fale diretamente com a equipe do Hotel Santo Amaro antes de reservar.
+          </p>
+
+          <div class="breakfast-features">
+            <div class="b-feature">
+              <span class="b-bullet"></span>
+              <span>Consulte quais serviços estão disponíveis</span>
+            </div>
+            <div class="b-feature">
+              <span class="b-bullet"></span>
+              <span>Confirme horários e condições diretamente com o hotel</span>
+            </div>
+            <div class="b-feature">
+              <span class="b-bullet"></span>
+              <span>Atendimento pelo WhatsApp para planejar sua visita</span>
+            </div>
+          </div>
+
+          <div class="breakfast-cta">
+            <button class="btn btn-primary open-reserve-modal">
+              Garantir Minha Estadia com Café
+            </button>
+          </div>
+        </div>
+
+        <div class="breakfast-image">
+          <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=800&q=80" alt="Café da Manhã Regional no Hotel Santo Amaro" loading="lazy">
+          <div class="breakfast-tag-box">
+            <strong>Informações atualizadas</strong>
+            <span>Consulte diretamente com o hotel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section section-testimonials" id="depoimentos">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">CONHEÇA O LOCAL</span>
+        <h2 class="section-title">Encontre o Hotel Santo Amaro</h2>
+        <div class="title-underline center"></div>
+        <p class="section-subtitle">
+          Consulte o perfil do estabelecimento no Google Maps para ver informações atualizadas, fotos e avaliações publicadas por visitantes.
+        </p>
+      </div>
+
+      <div class="google-profile-card">
+        <p>Veja as informações disponíveis diretamente na ficha do estabelecimento.</p>
+        <a href="https://www.google.com/maps/place/Hotel+santo+amaro/@-10.667543,-39.5025691,17z/data=!4m13!1m2!2m1!1zSG90w6lpcw!3m9!1s0x7129bee7873abd1:0x381f4c22dafb9cd7!5m2!4m1!1i2!8m2!3d-10.667543!4d-39.4978055" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Abrir perfil no Google Maps</a>
+      </div>
+
+      <!-- Google Maps Rating Badge -->
+      <div class="google-badge-container">
+        <div class="google-badge">
+          <svg class="google-icon" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.65v3.03h3.88c2.27-2.09 3.665-5.17 3.665-9.12z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.03c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.13C3.26 21.36 7.35 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.29c-.25-.72-.38-1.49-.38-2.29s.13-1.57.38-2.29V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.13z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.35 0 3.26 2.64 1.25 6.58l4.03 3.13c.95-2.83 3.6-4.96 6.72-4.96z"/></svg>
+          <div class="google-badge-info">
+            <span class="google-rating-score">Hotel Santo Amaro</span>
+            <span class="google-rating-label">Perfil do estabelecimento</span>
+          </div>
+          <a href="https://www.google.com/maps/place/Hotel+santo+amaro/@-10.667543,-39.5025691,17z/data=!4m13!1m2!2m1!1zSG90w6lpcw!3m9!1s0x7129bee7873abd1:0x381f4c22dafb9cd7!5m2!4m1!1i2!8m2!3d-10.667543!4d-39.4978055" target="_blank" rel="noopener noreferrer" class="google-link">
+            Ver no Google Maps →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Map Section -->
+  <section class="section section-location" id="localizacao">
+    <div class="container">
+      <div class="location-wrapper">
+        <div class="location-details">
+          <span class="section-tag">COMO CHEGAR</span>
+          <h2 class="section-title">Localização Privilegiada em Cansanção</h2>
+          <div class="title-underline"></div>
+          <p class="section-lead">
+            Estamos em um ponto estratégico e de fácil acesso na cidade de Cansanção, Bahia, próximo aos principais comércios, restaurantes e rodovias de ligação da região.
+          </p>
+
+          <div class="location-card-list">
+            <div class="loc-card">
+              <div class="loc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="loc-text">
+                <strong>Endereço</strong>
+                <p>Rua Senhora de Santana / Centro<br>Cansanção - BA, CEP: 48840-000</p>
+              </div>
+            </div>
+
+            <div class="loc-card">
+              <div class="loc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="loc-text">
+                <strong>Horários de Funcionamento</strong>
+                <p>Check-in: a partir das 14:00h<br>Check-out: até às 12:00h</p>
+              </div>
+            </div>
+
+            <div class="loc-card">
+              <div class="loc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="loc-text">
+                <strong>Contato Direto</strong>
+                <p>WhatsApp / Telefone para reservas e suporte em tempo real.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="location-actions">
+            <!-- Botão de Ação Direto para o link fornecido do Google Maps -->
+            <a href="https://www.google.com/maps/place/Hotel+santo+amaro/@-10.667543,-39.5025691,17z/data=!4m13!1m2!2m1!1zSG90w6lpcw!3m9!1s0x7129bee7873abd1:0x381f4c22dafb9cd7!5m2!4m1!1i2!8m2!3d-10.667543!4d-39.4978055!15sCgdIb3TDqWlzkgEFaG90ZWyqATwQASoLIgdob3TDqWlzKAwyHhABIhpDDv8yhIOOonHnGd8aMXXbswJ45Bccit1k7DILEAIiB2hvdMOpaXPgAQA!16s%2Fg%2F11s0tcj692" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+              <span>Traçar Rota no Google Maps</span>
+            </a>
+            <button class="btn btn-outline open-reserve-modal">
+              Fazer Reserva
+            </button>
+          </div>
+        </div>
+
+        <div class="location-map">
+          <div class="map-frame-box">
+            <!-- Google Maps Embed com as coordenadas exatas do Hotel Santo Amaro em Cansanção (-10.667543, -39.4978055) -->
+            <iframe
+              title="Localização do Hotel Santo Amaro no Google Maps"
+              src="https://maps.google.com/maps?q=-10.667543,-39.4978055&hl=pt-br&z=16&output=embed"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <div class="map-caption">
+            <span>Coordenadas GPS: -10.667543, -39.4978055 • Cansanção, Bahia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section section-faq">
+    <div class="container max-w-md">
+      <div class="section-header text-center">
+        <span class="section-tag">DÚVIDAS FREQUENTES</span>
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        <div class="title-underline center"></div>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Qual o horário de check-in e check-out?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Consulte diretamente a equipe do Hotel Santo Amaro para confirmar os horários de entrada e saída da hospedagem.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>O café da manhã está incluso na diária?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Consulte a equipe para confirmar se o café da manhã está disponível e se está incluído na tarifa escolhida.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>O hotel possui estacionamento para veículos?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            Para confirmar a disponibilidade de estacionamento durante a sua estadia, entre em contato diretamente com o hotel.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Quais as formas de pagamento aceitas?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            Consulte diretamente o hotel para confirmar as formas de pagamento aceitas e as condições de reserva.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Como faço para reservar com antecedência?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            Use os botões de contato para enviar uma consulta pelo WhatsApp. Como o número ainda precisa ser confirmado, atualize o contato do hotel nos arquivos antes de publicar o site.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Callout -->
+  <section class="section section-cta-banner">
+    <div class="container text-center">
+      <span class="cta-tag">SUA MELHOR ESCOLHA EM CANSANÇÃO</span>
+      <h2 class="cta-heading">Planejando sua viagem ou passagem por Cansanção?</h2>
+      <p class="cta-sub">
+        Garanta conforto, sossego e a melhor hospitalidade baiana com tarifas justas e reserva rápida.
+      </p>
+      <div class="cta-buttons">
+        <button class="btn btn-primary btn-lg open-reserve-modal">
+          <span>Reservar Minha Estadia Agora</span>
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <a href="https://wa.me/5575991036582?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20valores%20para%20o%20Hotel%20Santo%20Amaro." target="_blank" rel="noopener noreferrer" class="btn btn-outline-white btn-lg">
+          Tirar Dúvidas no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer" id="contato">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col brand-col">
+          <div class="footer-brand">
+            <span class="logo-subtitle">H O T E L</span>
+            <span class="logo-title">Santo Amaro</span>
+            <span class="logo-city">Cansanção • Bahia</span>
+          </div>
+          <p class="footer-about">
+            Aconchego, serenidade e o melhor atendimento para quem visita ou viaja a trabalho por Cansanção e região do sertão baiano.
+          </p>
+          <div class="footer-socials">
+            <a href="https://www.google.com/maps/place/Hotel+santo+amaro/@-10.667543,-39.5025691,17z/data=!4m13!1m2!2m1!1zSG90w6lpcw!3m9!1s0x7129bee7873abd1:0x381f4c22dafb9cd7!5m2!4m1!1i2!8m2!3d-10.667543!4d-39.4978055" target="_blank" rel="noopener noreferrer" aria-label="Google Maps" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+            </a>
+            <a href="https://wa.me/5575991036582" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#sobre">Sobre o Hotel</a></li>
+            <li><a href="#acomodacoes">Quartos & Tarifas</a></li>
+            <li><a href="#comodidades">Diferenciais</a></li>
+            <li><a href="#cafe">Café da Manhã</a></li>
+            <li><a href="#localizacao">Como Chegar</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Acomodações</h4>
+          <ul class="footer-links">
+            <li><a href="#acomodacoes">Quarto Individual</a></li>
+            <li><a href="#acomodacoes">Quarto Casal Conforto</a></li>
+            <li><a href="#acomodacoes">Quarto Duplo Solteiro</a></li>
+            <li><a href="#acomodacoes">Suíte Família / Triplo</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Atendimento & Endereço</h4>
+          <ul class="footer-contact">
+            <li>
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Rua Senhora de Santana, Cansanção - BA, 48840-000</span>
+            </li>
+            <li>
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>Atendimento via WhatsApp diário</span>
+            </li>
+            <li>
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Check-in 14:00h • Check-out 12:00h</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> Hotel Santo Amaro • Cansanção, Bahia. Todos os direitos reservados.</p>
+        <p class="footer-credit">Design minimalista e acolhedor para a melhor experiência do hóspede.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA Button -->
+  <a href="https://wa.me/5575991036582?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20sobre%20reservas%20no%20Hotel%20Santo%20Amaro." target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Falar no WhatsApp com o Hotel Santo Amaro">
+    <div class="whatsapp-badge">1</div>
+    <div class="whatsapp-tooltip">Reserve pelo WhatsApp</div>
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.668-.699c.969.529 1.94.811 2.792.811 3.182 0 5.768-2.587 5.769-5.766 0-3.182-2.587-5.767-5.769-5.767zm7.555 5.766c-.002 4.148-3.375 7.52-7.523 7.52-1.258 0-2.483-.316-3.568-.916l-4.52 1.185 1.208-4.407c-.675-1.127-1.032-2.42-1.034-3.743.002-4.148 3.375-7.521 7.524-7.521 4.147.001 7.513 3.373 7.513 7.522zm-3.344 3.753c-.15.421-.868.802-1.205.852-.338.05-.776.082-2.502-.638-2.208-.921-3.619-3.176-3.729-3.326-.11-.15-.892-1.189-.892-2.269 0-1.08.566-1.611.767-1.831.201-.22.44-.275.586-.275.146 0 .293.003.421.01.137.008.321-.052.502.383.187.45.64 1.564.697 1.678.057.114.095.247.021.393-.075.146-.113.237-.224.368-.112.131-.235.292-.335.393-.11.11-.225.23-.097.45.128.22.569.939 1.222 1.521.841.749 1.55.981 1.77.1091.22.11.349.092.478-.055.129-.147.549-.64.696-.86.147-.22.293-.183.494-.11.201.073 1.28.604 1.5.714.22.11.366.165.421.256.055.092.055.53-.095.951z"/>
+    </svg>
+  </a>
+
+  <!-- Reservation Modal -->
+  <div class="modal-backdrop" id="reserveModal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModal" aria-label="Fechar janela">&times;</button>
+      <div class="modal-header">
+        <span class="modal-subtitle">HOTEL SANTO AMARO</span>
+        <h3 class="modal-title">Solicitar Reserva ou Cotação</h3>
+        <p class="modal-desc">Preencha os dados e receba a confirmação instantânea da nossa equipe no WhatsApp.</p>
+      </div>
+
+      <form id="modalReserveForm" class="modal-form">
+        <div class="form-group">
+          <label for="modalRoomType">Tipo de Quarto</label>
+          <select id="modalRoomType" required>
+            <option value="Quarto Casal Conforto">Quarto Casal Conforto</option>
+            <option value="Quarto Individual Executivo">Quarto Individual Executivo</option>
+            <option value="Quarto Duplo Solteiro">Quarto Duplo Solteiro</option>
+            <option value="Suíte Família / Triplo">Suíte Família / Triplo</option>
+            <option value="Outro / Preciso de Orientação">Outro / Preciso de Orientação</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="modalCheckin">Data de Entrada (Check-in)</label>
+            <input type="date" id="modalCheckin" required>
+          </div>
+          <div class="form-group">
+            <label for="modalCheckout">Data de Saída (Check-out)</label>
+            <input type="date" id="modalCheckout" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="modalGuests">Nº de Hóspedes</label>
+            <select id="modalGuests">
+              <option value="1 Pessoa">1 Pessoa</option>
+              <option value="2 Pessoas" selected>2 Pessoas</option>
+              <option value="3 Pessoas">3 Pessoas</option>
+              <option value="4 ou mais">4 ou mais Pessoas</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="modalName">Seu Nome</label>
+            <input type="text" id="modalName" placeholder="Ex: Roberto Silva" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="modalObs">Observação ou Pedido Especial (Opcional)</label>
+          <textarea id="modalObs" rows="2" placeholder="Ex: Chegada prevista após às 19h, preferência por cama de casal..."></textarea>
+        </div>
+
+        <div class="modal-action">
+          <button type="submit" class="btn btn-primary btn-block btn-lg">
+            <span>Enviar Pedido pelo WhatsApp</span>
+            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          </button>
+          <p class="modal-secure-note">
+            <svg class="icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Sem cobrança imediata no site. Confirmação direta com o hotel.
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
