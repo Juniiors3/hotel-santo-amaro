@@ -213,53 +213,105 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 8. Envio do Formulário Rápido do Hero (Quick Booking Bar)
+  // 8. O formulário rápido passa pelo modal para coletar contato e registrar a solicitação.
   const quickBookingForm = document.getElementById('quickBookingForm');
   if (quickBookingForm) {
     quickBookingForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const inDate = formatDisplayDate(checkinInput.value);
-      const outDate = formatDisplayDate(checkoutInput.value);
-      const guests = document.getElementById('guestCount').value;
+      if (modalCheckin && checkinInput) modalCheckin.value = checkinInput.value;
+      if (modalCheckout && checkoutInput) modalCheckout.value = checkoutInput.value;
 
-      const message = `Olá! Gostaria de consultar tarifas e disponibilidade no *Hotel Santo Amaro* (Cansanção - BA):%0A%0A` +
-        `📅 *Check-in:* ${inDate}%0A` +
-        `📅 *Check-out:* ${outDate}%0A` +
-        `👥 *Hóspedes:* ${guests}%0A%0A` +
-        `Poderiam me informar valores e quartos disponíveis? Obrigado!`;
+      const quickGuests = document.getElementById('guestCount');
+      const modalGuests = document.getElementById('modalGuests');
+      if (quickGuests && modalGuests) {
+        const count = quickGuests.selectedIndex;
+        modalGuests.selectedIndex = Math.min(count, modalGuests.options.length - 1);
+      }
 
-      const whatsappUrl = `https://wa.me/${HOTEL_WHATSAPP_NUMBER}?text=${message}`;
-      window.open(whatsappUrl, '_blank');
+      openModal();
+      document.getElementById('modalName')?.focus();
     });
   }
 
-  // 9. Envio do Formulário Completo do Modal
+  // 9. Registro do pedido diretamente na tabela Supabase via REST API.
+  // Use a Publishable key (pública). NUNCA use a Secret key no frontend.
+  const SUPABASE_URL = 'https://qjdnaycpxuzhswaepgcb.supabase.co';
+  const SUPABASE_ANON_KEY = 'sb_publishable_e9mrFjE-RRNbQfoha8U_yA_DBvSQYdX';
+  const RESERVATION_ENDPOINT = `${SUPABASE_URL}/rest/v1/reservation_requests`;
   const modalReserveForm = document.getElementById('modalReserveForm');
   if (modalReserveForm) {
-    modalReserveForm.addEventListener('submit', (e) => {
+    modalReserveForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const roomType = document.getElementById('modalRoomType').value;
-      const inDate = formatDisplayDate(modalCheckin.value);
-      const outDate = formatDisplayDate(modalCheckout.value);
+      const inDateRaw = modalCheckin.value;
+      const outDateRaw = modalCheckout.value;
+      const inDate = formatDisplayDate(inDateRaw);
+      const outDate = formatDisplayDate(outDateRaw);
       const guests = document.getElementById('modalGuests').value;
-      const name = document.getElementById('modalName').value.trim();
-      const obs = document.getElementById('modalObs').value.trim();
+      const name = document.getElementById('modalName').value.trim().slice(0, 120);
+      const phone = document.getElementById('modalPhone').value.trim().slice(0, 30);
+      const obs = document.getElementById('modalObs').value.trim().slice(0, 1000);
 
-      let message = `Olá! Gostaria de solicitar uma reserva no *Hotel Santo Amaro* (Cansanção - BA):%0A%0A` +
-        `👤 *Nome:* ${name}%0A` +
-        `🛏️ *Acomodação:* ${roomType}%0A` +
-        `📅 *Entrada:* ${inDate}%0A` +
-        `📅 *Saída:* ${outDate}%0A` +
-        `👥 *Hóspedes:* ${guests}`;
+      const record = {
+        name,
+        phone,
+        checkin: inDateRaw,
+        checkout: outDateRaw,
+        room_type: roomType,
+        guests,
+      };
 
-      if (obs) {
-        message += `%0A📝 *Observações:* ${encodeURIComponent(obs)}`;
+      const whatsappUrl = `https://wa.me/${HOTEL_WHATSAPP_NUMBER}?text=${encodeURIComponent([
+        'Olá! Gostaria de solicitar uma reserva no Hotel Santo Amaro (Cansanção - BA):',
+        '',
+        `Nome: ${name}`,
+        `Telefone/WhatsApp: ${phone}`,
+        `Acomodação: ${roomType}`,
+        `Entrada: ${inDate}`,
+        `Saída: ${outDate}`,
+        `Hóspedes: ${guests}`,
+        ...(obs ? [`Observações: ${obs}`] : []),
+        '',
+        'Aguardo a confirmação e instruções de pagamento.',
+      ].join('\\n'))}`;
+      const submitButton = modalReserveForm.querySelector('button[type="submit"]');
+      const originalButtonText = submitButton?.innerHTML;
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.querySelector('span').textContent = 'Registrando solicitação…';
       }
 
-      message += `%0A%0AAguardo a confirmação e instruções de pagamento.`;
+      try {
+        if (SUPABASE_URL.includes('SEU-PROJETO')) {
+          throw new Error('Configure a URL do projeto Supabase no script.js.');
+        }
 
-      const whatsappUrl = `https://wa.me/${HOTEL_WHATSAPP_NUMBER}?text=${message}`;
-      window.open(whatsappUrl, '_blank');
+        const response = await fetch(RESERVATION_ENDPOINT, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': SUPABASE_ANON_KEY,
+            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+            'Prefer': 'return=minimal',
+          },
+          body: JSON.stringify(record),
+        });
+
+        if (!response.ok) {
+          const result = await response.json().catch(() => ({}));
+          throw new Error(result.message || result.error || `Erro do servidor (${response.status}).`);
+        }
+      } catch (error) {
+        console.error('Falha ao registrar solicitação no Supabase:', error);
+        window.alert(`Não foi possível salvar seu pedido no sistema: ${error.message}\\n\\nO WhatsApp será aberto para que seu contato não seja perdido.`);
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.innerHTML = originalButtonText;
+        }
+      }
+
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
       closeModal();
     });
   }

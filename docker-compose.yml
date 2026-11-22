@@ -1,0 +1,7 @@
+services:
+  hotel-santo-amaro:
+    build: .
+    container_name: hotel-santo-amaro
+    restart: unless-stopped
+    ports:
+      - "8080:80"

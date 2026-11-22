@@ -1,0 +1,9 @@
+# Local credentials and environment files
+keys.txt
+.env
+.env.*
+!.env.example
+v.1/
+*.zip
+dist/
+build/

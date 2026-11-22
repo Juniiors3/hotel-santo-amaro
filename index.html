@@ -803,7 +803,7 @@
       <div class="modal-header">
         <span class="modal-subtitle">HOTEL SANTO AMARO</span>
         <h3 class="modal-title">Solicitar Reserva ou Cotação</h3>
-        <p class="modal-desc">Preencha os dados e receba a confirmação instantânea da nossa equipe no WhatsApp.</p>
+        <p class="modal-desc">Informe seu contato. Seus dados serão usados para responder à solicitação; o envio não confirma a reserva.</p>
       </div>
 
       <form id="modalReserveForm" class="modal-form">
@@ -841,8 +841,13 @@
           </div>
           <div class="form-group">
             <label for="modalName">Seu Nome</label>
-            <input type="text" id="modalName" placeholder="Ex: Roberto Silva" required>
+            <input type="text" id="modalName" name="name" autocomplete="name" maxlength="120" placeholder="Ex: Roberto Silva" required>
           </div>
+        </div>
+
+        <div class="form-group">
+          <label for="modalPhone">Seu telefone / WhatsApp</label>
+          <input type="tel" id="modalPhone" name="phone" autocomplete="tel" inputmode="tel" maxlength="30" placeholder="(75) 99999-9999" required>
         </div>
 
         <div class="form-group">

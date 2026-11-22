@@ -1,0 +1,4 @@
+[functions.create-reservation-request]
+# A função aceita solicitações públicas do formulário e valida os campos no servidor.
+# Não depende de sessão de usuário; não envie service_role pelo navegador.
+verify_jwt = false

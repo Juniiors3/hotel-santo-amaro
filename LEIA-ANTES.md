@@ -10,6 +10,17 @@ O site foi criado a partir do link do Google Maps fornecido. O link confirma o n
 4. Não publique como reais avaliações, nota, depoimentos, horários, política de pagamento, tipos de quarto, café da manhã ou comodidades sem confirmação do hotel. Esses itens devem ser confirmados e editados no `index.html`.
 5. O formulário encaminha a solicitação para o WhatsApp; não confirma disponibilidade nem efetua reserva automaticamente.
 
+## Registro de solicitações no Supabase (REST API direta)
+
+O formulário grava os pedidos de reserva diretamente na tabela `public.reservation_requests` via REST API do Supabase, sem depender de Edge Function.
+
+1. No painel Supabase (**SQL Editor**), execute o arquivo `supabase/migrations/202611210001_create_reservation_requests.sql`. Ele cria a tabela e a política de RLS que permite somente INSERT anônimo.
+2. Em **Project Settings → API**, copie:
+   - **Project URL** (ex: `https://qjdnaycpxuzhswaepgcb.supabase.co`)
+   - **anon public key** (o token JWT que começa com `eyJ...`)
+3. No `script.js`, configure `SUPABASE_URL` e `SUPABASE_ANON_KEY` com esses valores. Nunca use a chave `service_role` no site.
+4. Caso a gravação no banco falhe por instabilidade de rede ou chave expirada, o site exibe um aviso e abre o WhatsApp com a mensagem pronta para que o contato do cliente não seja perdido.
+
 ## Arquivos
 
 - `index.html` — página do site.

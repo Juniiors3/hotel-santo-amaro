@@ -12,8 +12,9 @@ Site institucional e de reservas para o **Hotel Santo Amaro**, desenvolvido com 
   - Textos de alto contraste e legibilidade (`#1A1A1A`, `#6B6B6B`)
   - Acentos orgânicos em verde floresta sóbrio (`#2C5F2D`) e toques dourados discretos (`#B8860B`).
 - **Foco em Conversão (Call-to-Action):**
-  - Barra de reserva rápida no topo (check-in, check-out e hóspedes com mensagem direta no WhatsApp).
+  - Barra de reserva rápida no topo (check-in, check-out e hóspedes encaminhados ao formulário de contato).
   - Modal interativo de reserva detalhada.
+  - Registro de solicitações no Supabase via Edge Function.
   - Botão flutuante de atendimento via WhatsApp sempre visível.
   - Botão direto para traçar rota e abrir o local no Google Maps.
 - **100% Responsivo:** Perfeita adaptação para celulares, tablets e telas de computador.
@@ -35,7 +36,9 @@ Site institucional e de reservas para o **Hotel Santo Amaro**, desenvolvido com 
 
 ```
 hotel santo amaro/
-├── index.html       # Estrutura completa, semântica e acessível
+├── index.html       # Página principal do site com formulário de reserva
+├── admin.html       # Painel administrativo para consulta de solicitações
+├── admin.js         # Lógica de consulta, filtros, métricas e exportação CSV
 ├── style.css        # Folha de estilos minimalista com variáveis CSS
 ├── script.js        # Lógica do formulário de reserva, modal, filtros e WhatsApp
 └── README.md        # Documentação do projeto

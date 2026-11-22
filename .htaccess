@@ -1,0 +1,36 @@
+# ==============================================================================
+# HOTEL SANTO AMARO — CONFIGURAÇÃO APACHE / CPANEL / HOSTINGER
+# ==============================================================================
+
+# 1. Bloquear acesso a arquivos sensíveis e de configuração
+<FilesMatch "^(\.git|\.env|keys\.txt|.*\.sql)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# 2. Ativar compressão GZIP
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# 3. Cabeçalhos de Segurança
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# 4. Cache para arquivos estáticos
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 hour"
+    ExpiresByType application/javascript "access plus 1 hour"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+</IfModule>
+
+# 5. Configuração de Charset padrão
+AddDefaultCharset UTF-8
