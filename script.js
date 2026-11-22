@@ -273,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ...(obs ? [`Observações: ${obs}`] : []),
         '',
         'Aguardo a confirmação e instruções de pagamento.',
-      ].join('\\n'))}`;
+      ].join('\n'))}`;
       const submitButton = modalReserveForm.querySelector('button[type="submit"]');
       const originalButtonText = submitButton?.innerHTML;
       if (submitButton) {
