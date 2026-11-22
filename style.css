@@ -170,71 +170,76 @@ ul {
   height: 14px;
 }
 
+
 /* --------------------------------------------------------------------------
-   4. Botões de Ação (CTAs)
+   4. Botões de Ação (CTAs) - PADRÃO HOTEL SANTO AMARO
    -------------------------------------------------------------------------- */
-.btn {
+
+.btn,
+.btn-primary,
+.btn-outline,
+.btn-outline-white {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  padding: 0.85rem 1.75rem;
+
+  min-height: 50px;
+  padding: 0 1.8rem;
+
+  background-color: var(--color-accent);
+  color: #FFFFFF !important;
+
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+
+  font-family: var(--font-sans);
   font-size: 0.92rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-  border-radius: var(--radius-sm);
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+
   cursor: pointer;
-  transition: var(--transition);
   white-space: nowrap;
+
+  box-shadow: 0 4px 14px rgba(44, 95, 45, 0.18);
+  transition: var(--transition);
 }
 
-.btn-primary {
-  background-color: var(--color-accent);
-  color: #FFFFFF;
-  box-shadow: 0 4px 14px rgba(44, 95, 45, 0.22);
-}
-
-.btn-primary:hover {
-  background-color: var(--color-accent-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(44, 95, 45, 0.3);
-}
-
-.btn-outline {
-  background-color: transparent;
-  color: var(--color-text);
-  border: 1px solid var(--color-border);
-}
-
-.btn-outline:hover {
-  background-color: var(--color-surface-alt);
-  border-color: var(--color-text-secondary);
-}
-
-.btn-outline-white {
-  background-color: transparent;
-  color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-}
-
+/* Hover padrão */
+.btn:hover,
+.btn-primary:hover,
+.btn-outline:hover,
 .btn-outline-white:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: #FFFFFF;
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(44, 95, 45, 0.25);
 }
 
-.btn-sm {
-  padding: 0.6rem 1.2rem;
-  font-size: 0.85rem;
+/* Acessibilidade: foco pelo teclado */
+.btn:focus-visible {
+  outline: 3px solid rgba(44, 95, 45, 0.35);
+  outline-offset: 3px;
 }
 
+/* Tamanhos padronizados */
+.btn-sm,
 .btn-lg {
-  padding: 1rem 2.2rem;
-  font-size: 1rem;
+  min-height: 50px;
+  padding: 0 1.8rem;
+  font-size: 0.92rem;
 }
 
+/* Botão ocupando toda a largura */
 .btn-block {
+  display: flex;
   width: 100%;
 }
+
 
 /* --------------------------------------------------------------------------
    5. Top Bar de Avisos
@@ -869,11 +874,10 @@ ul {
   flex-shrink: 0;
 }
 
-.room-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: auto;
+.room-footer .btn {
+  min-height: 46px;
+  padding: 0 1rem;
+  font-size: 0.85rem;
 }
 
 .room-rate {
