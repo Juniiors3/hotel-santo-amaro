@@ -1931,3 +1931,103 @@ ul {
     transition-duration: .01ms !important;
   }
 }
+
+
+/* =========================================
+   CORREÇÃO DEFINITIVA - MENU MOBILE
+   HOTEL SANTO AMARO
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+  /* Estrutura do cabeçalho */
+  .main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    overflow: visible;
+  }
+
+  .header-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: visible;
+  }
+
+  /* Botão hambúrguer */
+  .header-actions {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .mobile-toggle {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1002;
+    position: relative;
+  }
+
+  /* Menu escondido inicialmente */
+  .nav-menu {
+    display: none !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+    padding: 20px;
+    margin: 0;
+    z-index: 1001;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    border-radius: 0 0 12px 12px;
+  }
+
+  /* Menu aberto */
+  .nav-menu.active {
+    display: block !important;
+  }
+
+  /* Lista vertical */
+  .nav-list {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .nav-list li {
+    display: block;
+    width: 100%;
+    margin: 0;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .nav-list li:last-child {
+    border-bottom: none;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 13px 10px;
+    color: #333333;
+    text-decoration: none;
+  }
+
+  .nav-link:hover {
+    color: #a67c52;
+  }
+}
