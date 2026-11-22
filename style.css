@@ -1889,6 +1889,12 @@ ul {
 }
 /* Ajustes adicionais de responsividade e acessibilidade */
 @media (max-width: 560px) {
+  .main-header { width: 100%; }
+  .header-container { width: 100%; min-width: 0; padding-left: 1rem; padding-right: 1rem; gap: .75rem; }
+  .brand-logo { min-width: 0; flex-shrink: 1; }
+  .logo-title { font-size: 1.55rem; white-space: nowrap; }
+  .header-actions { flex: 0 0 auto; gap: .65rem; }
+  .header-actions .btn { display: none; }
   .top-bar-content { justify-content: center; text-align: center; }
   .top-bar-content > .top-bar-item:first-child { display: none; }
   .header-container { height: 72px; }
